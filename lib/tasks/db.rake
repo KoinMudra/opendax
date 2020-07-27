@@ -1,7 +1,7 @@
 namespace :db do
 
   def mysql_cli
-    return "mysql -u root -h db -P 3306 -pchangeme"
+    return "mysql -u root -h db -P 3306 -pMudracAUKhF5VVnV"
   end
 
   desc 'Create database'
@@ -20,9 +20,9 @@ namespace :db do
 
   desc 'Drop all databases'
   task :drop do
-    sh %q(docker-compose run --rm db /bin/sh -c "mysql -u root -h db -P 3306 -pchangeme -e 'DROP DATABASE peatio_production'")
-    sh %q(docker-compose run --rm db /bin/sh -c "mysql -u root -h db -P 3306 -pchangeme -e 'DROP DATABASE barong_production'")
-    sh %q(docker-compose run --rm db /bin/sh -c "mysql -u root -h db -P 3306 -pchangeme -e 'DROP DATABASE superset'")
+    sh %q(docker-compose run --rm db /bin/sh -c "mysql -u root -h db -P 3306 -pMudracAUKhF5VVnV -e 'DROP DATABASE peatio_production'")
+    sh %q(docker-compose run --rm db /bin/sh -c "mysql -u root -h db -P 3306 -pMudracAUKhF5VVnV -e 'DROP DATABASE barong_production'")
+    sh %q(docker-compose run --rm db /bin/sh -c "mysql -u root -h db -P 3306 -pMudracAUKhF5VVnV -e 'DROP DATABASE superset'")
   end
 
   desc 'Database Console'
